@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- <meta name="viewport" content="width, initial-scale=1.0" /> -->
+    <title>CRUD | Ritik Sharma</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+</head>
+
+<body>
+
+    <!-- Adding EMployees -->
+    <div class="add_employees">
+        <h2>ADD EMPLOYEES</h2>
+        <div class="input_data">
+            Name: <input type="text" placeholder="Full name" id="add_name"> Mobile:
+            <input type="number" placeholder="Mobile no" value="number" id="add_mobile"> Salary:
+            <input type="number" placeholder="Enter salary" id="add_salary"> Position:
+            <input type="text" placeholder="Enter position" id="add_position">
+        </div>
+        <div class="add_btn">
+            <button id="add_worker">Add Employee</button>
+        </div>
+
+    </div>
+    <!-- Search section for employees -->
+    <div class="search">
+        <input type="search" name="search" placeholder="Enter employee name" id="search_input" onkeyup="searchNames();">
+    </div>
+    <!-- Employees info -->
+    <h2 id="emp_heading">Employees Data</h2>
+    <table id="table" cellpadding="10px" cellspacing="0px;" border='1px solid gray;'>
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Name</th>
+                <th>Mobile no.</th>
+                <th>Salary</th>
+                <th>Position</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="tbody" style="text-align: center;">
+
+        </tbody>
+        <p id="empty_data"></p>
+    </table>
+
+    <div class="edit_popup">
+        <div class="edit_data">
+            <div class="cross">X</div>
+            <label for="">Name:</label>
+            <input type="text" id="edit_name">
+            <label for="">Mobile:</label>
+            <input type="number" id="edit_mobile">
+            <label for="">salary:</label>
+            <input type="text" id="edit_salary">
+            <label for="">Position:</label>
+            <input type="text" id="edit_position">
+            <div class="btn">
+                <button id="updateBtn">Update</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/index.js"></script>
+
+</html>
